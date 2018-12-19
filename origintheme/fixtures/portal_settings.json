@@ -49,6 +49,14 @@
   "menu": [
    {
     "enabled": 1, 
+    "reference_doctype": "Patient", 
+    "role": "Patient", 
+    "route": "/personal-details", 
+    "target": null, 
+    "title": "Personal Details"
+   }, 
+   {
+    "enabled": 1, 
     "reference_doctype": "Project", 
     "role": null, 
     "route": "/project", 
@@ -137,7 +145,7 @@
    }, 
    {
     "enabled": 1, 
-    "reference_doctype": "Consultation", 
+    "reference_doctype": "Patient Encounter", 
     "role": "Patient", 
     "route": "/prescription", 
     "target": null, 
@@ -161,6 +169,14 @@
    }, 
    {
     "enabled": 1, 
+    "reference_doctype": "Newsletter", 
+    "role": null, 
+    "route": "/newsletters", 
+    "target": null, 
+    "title": "Newsletter"
+   }, 
+   {
+    "enabled": 1, 
     "reference_doctype": "Student Admission", 
     "role": null, 
     "route": "/admissions", 
@@ -169,30 +185,14 @@
    }, 
    {
     "enabled": 1, 
-    "reference_doctype": "Grant Application", 
-    "role": "Non Profit Portal User", 
-    "route": "/grant-application", 
-    "target": null, 
-    "title": "Grant Application"
-   }, 
-   {
-    "enabled": 1, 
-    "reference_doctype": "Chapter", 
+    "reference_doctype": "Certification Application", 
     "role": null, 
-    "route": "/chapters", 
+    "route": "/certification", 
     "target": null, 
-    "title": "Chapter"
-   }, 
-   {
-    "enabled": 1, 
-    "reference_doctype": "Newsletter", 
-    "role": null, 
-    "route": "/newsletters", 
-    "target": null, 
-    "title": "Newsletter"
+    "title": "Certification"
    }
   ], 
-  "modified": "2018-10-19 14:36:04.974594", 
+  "modified": "2018-12-19 14:04:18.722644", 
   "name": "Portal Settings"
  }
 ]
