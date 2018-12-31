@@ -140,9 +140,6 @@ fixtures = [
         "filters": [["name", "in", ["Origin Theme"]]]
     },
     {
-        "dt": "Portal Settings"
-    },
-    {
         "dt": "Website Settings"
     }
 ]
