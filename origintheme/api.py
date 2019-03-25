@@ -12,7 +12,7 @@ from frappe import throw, _
 from frappe.utils import flt
 
 def on_session_creation(login_manager):
-	print "On session create called"
+	print("On session create called")
 	info = frappe.db.get_value("User", frappe.local.session_obj.user,
 			["home_page_link", "user_type"], as_dict=1)
 
