@@ -641,6 +641,10 @@ li.user-progress .progress-chart {
 .help-link {
   display: none !important;
 }
-
+.form-sidebar .form-shared .octicon, .form-sidebar .form-viewers .octicon {
+  position: relative;
+  left: 7px;
+  top: 2px;
+}
 
 
