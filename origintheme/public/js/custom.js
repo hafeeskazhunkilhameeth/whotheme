@@ -65,6 +65,7 @@ $(document).ready(function() {
 	$('head').append(frappe.render_template("poppins"));
 	$('header').addClass('main-header');
 	$('.dropdown-help').addClass('hidden');
+	$('.btn-open-row').addClass('btn-xs btn btn-default');
 	$('#toolbar-user [href*="#background_jobs"]').addClass('hidden');
 	$('header .navbar').removeClass('navbar-fixed-top');
 
