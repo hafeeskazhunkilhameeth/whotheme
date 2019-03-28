@@ -646,24 +646,34 @@ li.user-progress .progress-chart {
   left: 7px;
   top: 2px;
 }
-.grid-row-open .form-in-grid {
-  opacity: 1;
-  height: 70vh;
-  overflow: scroll;
-  margin: 0px -15px;
-
-}
 .sortable-handle {
-  padding: 10px;
+  padding: 9px;
+  height: 39px;
 }
-
 .close {
   filter: alpha(opacity=30);
   opacity: .3;
 }
-
 .grid-row-open .form-in-grid {
   max-height: 65vh;
   height: 100%;
   overflow: scroll;
+}
+.grid-body .btn-open-row {
+  padding-top: 0px;
+  width: 100%;
+  padding: 1px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 20px;
+  color: white;
+  background-color: #a5a8a8;
+  border-color: transparent;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
 }
