@@ -660,10 +660,7 @@ li.user-progress .progress-chart {
   overflow: scroll;
 }
 .grid-static-col, .row-index {
-  height: 39px;
-  padding: 11px 15px;
-  max-height: 200px;
-  border-right: 1px solid #d6d6d6;
+  padding-top: 11px !important;
 }
 .grid-body .btn-open-row {
   padding-top: 0px;
@@ -684,7 +681,7 @@ li.user-progress .progress-chart {
   vertical-align: middle;
 }
 input[type="radio"], input[type="checkbox"] {
-  margin: 2px 0 0;
+  margin: 1px 0 0;
   margin-top: 1px \9;
   line-height: normal;
 }
