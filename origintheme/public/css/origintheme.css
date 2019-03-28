@@ -682,7 +682,7 @@ li.user-progress .progress-chart {
   vertical-align: middle;
 }
 input[type="radio"], input[type="checkbox"] {
-  margin: 1px 0 0;
+  margin: 3px 0 0;
   margin-top: 1px \9;
   line-height: normal;
 }

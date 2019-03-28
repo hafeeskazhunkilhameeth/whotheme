@@ -632,7 +632,7 @@ input[type="checkbox"]:before {
     -webkit-transition: 150ms color;
     -o-transition: 150ms color;
     transition: 150ms color;
-    margin-top: 1px;
+    margin-top: -1px;
 
 }
 
