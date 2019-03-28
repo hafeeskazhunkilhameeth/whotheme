@@ -686,3 +686,8 @@ input[type="radio"], input[type="checkbox"] {
   margin-top: 1px \9;
   line-height: normal;
 }
+
+.awesomplete > ul {
+  margin-top: 6px;
+  border-radius: 5px;
+}
