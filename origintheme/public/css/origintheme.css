@@ -699,3 +699,7 @@ input[type="radio"], input[type="checkbox"] {
 .btn-order {
   padding: 2px 10px 0
 }
+
+.indicator.blue::before, .indicator-right.blue::after {
+  background: #51adfb;
+}
