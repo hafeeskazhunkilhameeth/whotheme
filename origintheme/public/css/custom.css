@@ -339,9 +339,10 @@ h6.uppercase,
     color: #666;
 }
 
-.control-label,
+.control-label, 
 .grid-heading-row {
-    color: #666666;
+    border-radius: 4px 4px 0 0;
+    color: #7f7f7f;
 }
 
 .inline-graph .inline-graph-half .inline-graph-bar-left-red {
@@ -447,14 +448,8 @@ h6.uppercase,
 
 .grid-heading-row {
     border-bottom: 1px solid #d6d6d6;
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
     font-weight: bold;
-}
-
-.control-label,
-.grid-heading-row {
-    border-radius: 4px 4px 0 0;
-    color: #888888;
 }
 
 .grid-static-col,
@@ -617,6 +612,7 @@ label {
     margin-bottom: 0px;
 }
 
+
 input[type="checkbox"]:before {
     position: absolute;
     font-family: 'FontAwesome';
@@ -628,18 +624,18 @@ input[type="checkbox"]:before {
     text-transform: none;
     line-height: 14px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 19px;
     -webkit-transition: 150ms color;
     -o-transition: 150ms color;
     transition: 150ms color;
-    margin-top: -1px;
-
+    margin-top: 0px;
 }
 
 input[type="checkbox"]:checked:before {
     content: '\f14a';
-    font-size: 13px;
+    font-size: 18px;
     color: #edc35f;
+     margin-top: -1px;
   }
 
 /* .inline-graph {
