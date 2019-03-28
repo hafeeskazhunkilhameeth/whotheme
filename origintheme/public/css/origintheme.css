@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   padding-right: 10px;
+  margin-top: 5px;
 }
 
 .tag-filters-area {
