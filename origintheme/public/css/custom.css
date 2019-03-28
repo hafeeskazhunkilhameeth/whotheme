@@ -657,3 +657,18 @@ input[type="checkbox"]:checked:before {
     bottom: 0px;
     overflow-y: auto;
 }
+
+.form-section .section-head .collapse-indicator {
+    color: #86754d;
+    margin-left: 16px;
+    position: relative;
+    bottom: -1px;
+}
+
+.form-section .section-head .collapse-indicator.octicon-chevron-up {
+    bottom: 2px;
+}
+
+.octicon-search {
+    right: 10px;
+}
