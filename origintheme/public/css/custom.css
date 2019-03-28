@@ -151,7 +151,7 @@ header .container {
     top: 3px;
     font-size: 12px;
     font-weight: 400;
-    color: #86754e;
+    color: #b2a177;
     padding: 0px;
 }
 
@@ -178,6 +178,9 @@ header .dropdown-help {
 .form-sidebar .sidebar-image-section .standard-image {
     font-size: 72px;
     border-radius: 50%;
+    background-color: #f7f7f7 !important;
+    color: #dedede;
+    border: 1px solid #dedede;
 }
 
 .badge {

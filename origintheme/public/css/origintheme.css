@@ -703,3 +703,49 @@ input[type="radio"], input[type="checkbox"] {
 .indicator.blue::before, .indicator-right.blue::after {
   background: #51adfb;
 }
+
+.editable-form .grid-static-col.bold {
+  background-color: #fffaef;
+}
+
+.like-disabled-input {
+  background-color: #f6f5f1;
+}
+
+.address-box {
+  background-color: #f9f9f9;
+  padding: 0px 15px;
+  margin: 15px 0px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.btn-default {
+  color: white;
+  background-color: #b6b5b3;
+  border-color: transparent;
+}
+.page-icon-group {
+  vertical-align: middle;
+  font-size: 20px;
+}
+.indicator::before, .indicator-right::after {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+}
+.page-title .indicator {
+  font-size: 14px;
+}
+
+.page-title .title-text {
+  margin-right: 7px;
+  max-width: 75%;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 300;
+  position: relative;
+  top: 0;
+  color: #86754d;
+}
