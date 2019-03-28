@@ -692,19 +692,15 @@ input[type="radio"], input[type="checkbox"] {
   border-radius: 5px;
   border: 1px solid #d0d0d0;
 }
-
+.awesomplete > ul > li:hover,
 .awesomplete > ul > li[aria-selected=true] {
   background-color: #e0dfd694;
   color: #87754d;
   text-shadow: none;
 }
-
-
-
 .page-actions {
   padding-right: 0;
 }
-
 .btn-order {
   padding: 2px 10px 0 !important;
 }

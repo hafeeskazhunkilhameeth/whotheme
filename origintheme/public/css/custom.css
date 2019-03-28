@@ -249,6 +249,14 @@ header .dropdown-help {
   text-decoration: none;
   background-color: #e0dfd694;
 }
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: inherit;
+  background-color: #e0dfd694;
+  outline: 0;
+}
 
 .navbar-new-comments {
     display: inline-block;
