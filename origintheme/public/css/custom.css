@@ -193,6 +193,7 @@ header .dropdown-help {
     vertical-align: baseline;
     background-color: #f0f0f0;
     border-radius: 10px;
+    margin-left: 5px;
 }
 
 .avatar {
