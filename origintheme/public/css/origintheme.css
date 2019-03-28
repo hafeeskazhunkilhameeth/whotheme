@@ -682,7 +682,7 @@ li.user-progress .progress-chart {
   vertical-align: middle;
 }
 input[type="radio"], input[type="checkbox"] {
-  margin: 3px 0 0;
+  margin: 3px 0 0 1px;
   margin-top: 1px \9;
   line-height: normal;
 }
@@ -748,4 +748,14 @@ input[type="radio"], input[type="checkbox"] {
   position: relative;
   top: 0;
   color: #86754d;
+}
+
+.form-sidebar .liked-by .octicon-heart {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.like-action.octicon-heart {
+  color: #ff5858;
+  font-size: 18px;
 }

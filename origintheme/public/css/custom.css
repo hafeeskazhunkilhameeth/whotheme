@@ -655,10 +655,11 @@ input[type="checkbox"]:checked:before {
 }
 
 .form-section .section-head .collapse-indicator {
-    color: #86754d;
+    color: #a2977c73;
     margin-left: 16px;
     position: relative;
-    bottom: -1px;
+    bottom: 0px;
+    font-size: 26px;
 }
 
 .form-section .section-head .collapse-indicator.octicon-chevron-up {
