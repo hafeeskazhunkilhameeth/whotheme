@@ -237,12 +237,17 @@ header .dropdown-help {
 }
 
 .dropdown-menu {
-    padding: 0 6px;
     font-size: 12px;
     max-height: 400px;
     overflow: auto;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 4px !important;
     text-align: right;
+}
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #e0dfd694;
 }
 
 .navbar-new-comments {
@@ -592,16 +597,6 @@ fieldset[disabled] .btn-primary.active {
     padding: 0;
 }
 
-.page-title .title-text {
-    margin-right: 7px;
-    max-width: 75%;
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: 300;
-    position: relative;
-    top: 0;
-    color: #2f3434;
-}
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     line-height: 1;
@@ -658,7 +653,7 @@ input[type="checkbox"]:checked:before {
     color: #a2977c73;
     margin-left: 16px;
     position: relative;
-    bottom: 0px;
+    bottom: -2px;
     font-size: 26px;
 }
 
