@@ -238,7 +238,7 @@ header .dropdown-help {
 
 .dropdown-menu {
     font-size: 12px;
-    max-height: 400px;
+    max-height: 440px;
     overflow: auto;
     border-radius: 4px !important;
     text-align: right;
