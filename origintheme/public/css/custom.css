@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'appareo';
+    src: url('origin/assets/origintheme/fonts/kimmy_design_-_appareo-extralight-webfont.woff2') format('woff2'),
+         url('origin/assets/origintheme/fonts/kimmy_design_-_appareo-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'appareo';
+    src: url('origin/assets/origintheme/fonts/kimmy_design_-_appareo-extralightitalic-webfont.woff2') format('woff2'),
+         url('origin/assets/origintheme/fonts/kimmy_design_-_appareo-extralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.appareo {
+  font-family: 'appareo', !important;
+}
+
 /** Origin Theme App - Hide **/
 .btn[data*="Fri"] {
     margin-right: 15px;
@@ -8,7 +29,7 @@
 }
 
 .navbar-nav a[href^="#modules/"]{
-    display:none; 
+    display:none;
 }
 /** Origin Theme App - Inset **/
 
@@ -243,7 +264,7 @@ header .dropdown-help {
     border-radius: 4px !important;
     text-align: right;
 }
-.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   color: #262626;
   text-decoration: none;
@@ -335,7 +356,7 @@ header .dropdown-help {
     font-weight: normal
 }
 
-h6.uppercase, 
+h6.uppercase,
 .h6.uppercase {
     color: #86754d;
     font-size: 22px;
@@ -352,7 +373,7 @@ h6.uppercase,
     color: #666;
 }
 
-.control-label, 
+.control-label,
 .grid-heading-row {
     border-radius: 4px 4px 0 0;
     color: #7f7f7f;
@@ -434,7 +455,7 @@ h6.uppercase,
 }
 
 
-.form-section:not(:last-child), 
+.form-section:not(:last-child),
 .form-inner-toolbar{
     border-top: 1px solid #eaeaea;
     border-bottom: none;
@@ -642,10 +663,10 @@ input[type="checkbox"]:checked:before {
   }
 
 /* .inline-graph {
-    
+
         justify-content: center;
         display: flex;
-    
+
 } */
 .print-format-builder-sidebar {
     display: inline-block;
