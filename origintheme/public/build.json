@@ -13,7 +13,8 @@
         "public/js/template/main-sidebar.html",
         "public/js/template/stacey-sidebar.html",
         "public/js/template/melissa-sidebar.html",
-        "public/js/template/accounting-sidebar.html"
+        "public/js/template/accounting-sidebar.html",
+        "public/js/template/farm-sales-sidebar.html"
     ]
 
 }
