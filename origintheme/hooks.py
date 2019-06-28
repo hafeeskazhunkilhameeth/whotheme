@@ -134,12 +134,4 @@ website_context = {
 # 	"frappe.desk.doctype.event.event.get_events": "origintheme.event.get_events"
 # }
 
-fixtures = [
-    {
-        "dt": "Website Theme",
-        "filters": [["name", "in", ["Origin Theme"]]]
-    },
-    {
-        "dt": "Website Settings"
-    }
-]
+# fixtures = []
