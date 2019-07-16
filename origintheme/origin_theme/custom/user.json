@@ -95,7 +95,7 @@
    "search_index": 0,
    "unique": 0,
    "width": null
- }, 
+ },
   {
    "_assign": null,
    "_comments": null,
@@ -218,7 +218,30 @@
    "property": "read_only_onload",
    "property_type": "Check",
    "value": null
-  }
+ },
+ {
+  "_assign": null,
+  "_comments": null,
+  "_liked_by": null,
+  "_user_tags": null,
+  "creation": "2019-07-16 11:04:26.756912",
+  "default_value": null,
+  "doc_type": "User",
+  "docstatus": 0,
+  "doctype_or_field": "DocField",
+  "field_name": "email_signature",
+  "idx": 0,
+  "modified": "2019-07-16 11:04:26.756912",
+  "modified_by": "Administrator",
+  "name": "Email Template-email_signature-fieldtype",
+  "owner": "Administrator",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property": "fieldtype",
+  "property_type": "Select",
+  "value": "HTML Editor"
+ }
  ],
  "sync_on_migrate": 1
 }
