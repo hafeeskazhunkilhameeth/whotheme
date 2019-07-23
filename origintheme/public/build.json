@@ -10,11 +10,13 @@
         "public/js/custom.js"
     ],
     "js/origintheme-template.min.js": [
-        "public/js/template/main-sidebar.html",
-        "public/js/template/stacey-sidebar.html",
-        "public/js/template/melissa-sidebar.html",
         "public/js/template/accounting-sidebar.html",
-        "public/js/template/farm-sales-sidebar.html"
+        "public/js/template/farm-sales-sidebar.html",
+        "public/js/template/frontoffice-sidebar.html",
+        "public/js/template/main-sidebar.html",
+        "public/js/template/melissa-sidebar.html",
+        "public/js/template/plant-sidebar.html",
+        "public/js/template/stacey-sidebar.html"
     ]
 
 }
