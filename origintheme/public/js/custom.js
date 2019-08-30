@@ -1,3 +1,6 @@
+
+let isMobile = window.innerWidth < 640 ? true : false;
+
 function redirect_desk() {
 
 	var url_hash = window.location.hash.replace(/#/g,'').replace(/\//g,'');
@@ -18,61 +21,68 @@ function redirect_desk() {
 	}
 }
 
+// $(window).resize(function(){
+//   $('span').text(x += 1);
+// });
+
 $(window).bind('hashchange', function() {
 	redirect_desk()
 });
 
 $(document).ready(function() {
 
-	// console.log("Current user",frappe.utils.user);
+	// console.log("Current user", frappe.utils.user);
 
 	redirect_desk();
 
-	function handle_mobile() {
-		if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			window.location.href = '/me';
-		}
-	}
-
-	handle_mobile();
+	// function handle_mobile() {
+	// 	if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	// 		window.location.href = '/me';
+	// 	}
+	// }
+	//
+	// handle_mobile();
 	$(window).bind('hashchange', function() {
-		handle_mobile();
+		// handle_mobile();
 	});
 
-	frappe.call({
-		method: "origintheme.api.get_sidebar_template",
-		args: {
-		},
-	}).done((r) => {
-		var temp = r.message;
-		if(!temp) {
-			temp = 'main-sidebar';
-		}
-		try {
-			$('.main-section').append(frappe.render_template(temp));
-		} catch(err) {
+
+	if(!isMobile) {
+		frappe.call({
+			method: "origintheme.api.get_sidebar_template",
+			args: {
+			},
+		}).done((r) => {
+			var temp = r.message;
+			if(!temp) {
+				temp = 'main-sidebar';
+			}
+			try {
+				$('.main-section').append(frappe.render_template(temp));
+			} catch(err) {
+				$('.main-section').append(frappe.render_template("main-sidebar"));
+			}
+
+		}).fail((f) => {
 			$('.main-section').append(frappe.render_template("main-sidebar"));
-		}
-
-	}).fail((f) => {
-		$('.main-section').append(frappe.render_template("main-sidebar"));
-	})
+		})
 
 
-	$('header').prepend(frappe.render_template("logo"));
-	$('.navbar-desk').prepend(frappe.render_template("company-name"));
-	$('head').append(frappe.render_template("material-icons"));
-	$('head').append(frappe.render_template("poppins"));
-	$('header').addClass('main-header');
-	$('.dropdown-help').addClass('hidden');
-	$('#toolbar-user [href*="#background_jobs"]').addClass('hidden');
-	$('header .navbar').removeClass('navbar-fixed-top');
+		$('header').prepend(frappe.render_template("logo"));
+		$('.navbar-desk').prepend(frappe.render_template("company-name"));
+		$('head').append(frappe.render_template("material-icons"));
+		$('head').append(frappe.render_template("poppins"));
+		$('header').addClass('main-header');
+		$('.dropdown-help').addClass('hidden');
+		$('#toolbar-user [href*="#background_jobs"]').addClass('hidden');
+		$('header .navbar').removeClass('navbar-fixed-top');
 
-	$('.navbar-home').addClass('hidden');
-	$('body').addClass('skin-origin sidebar-mini sidebar-collapse');
-	$('#body_div').addClass('content-wrapper');
+		$('.navbar-home').addClass('hidden');
+		$('body').addClass('skin-origin sidebar-mini sidebar-collapse');
+		$('#body_div').addClass('content-wrapper');
 
-	origintheme.set_user_background();
+		origintheme.set_user_background();
+	}
 
 });
 
@@ -99,68 +109,72 @@ $(document).ready(function() {
 // 	}
 //    }, false);
 //    if (element2.parentNode == element1)
-frappe.provide("origintheme");
 
-// add toolbar icon
-$(document).bind('toolbar_setup', function() {
-	frappe.app.name = "origintheme";
-	$('.navbar-home').html(frappe._('Home'));
 
-});
+if(!isMobile) {
+	frappe.provide("origintheme");
 
-origintheme.set_user_background = function(src, selector, style){
-	if(!selector) selector = "#page-desktop";
-	if(!style) style = "Fill Screen";
-	if(src) {
-		if (window.cordova && src.indexOf("http") === -1) {
-			src = frappe.base_url + src;
+	// add toolbar icon
+	$(document).bind('toolbar_setup', function() {
+		frappe.app.name = "origintheme";
+		$('.navbar-home').html(frappe._('Home'));
+
+	});
+
+	origintheme.set_user_background = function(src, selector, style){
+		if(!selector) selector = "#page-desktop";
+		if(!style) style = "Fill Screen";
+		if(src) {
+			if (window.cordova && src.indexOf("http") === -1) {
+				src = frappe.base_url + src;
+			}
+			var background = repl('background: url("%(src)s") center center;', {src: src});
+		} else {
+			var background = "background-color: #FFFFFF;";
 		}
-		var background = repl('background: url("%(src)s") center center;', {src: src});
-	} else {
-		var background = "background-color: #FFFFFF;";
+
+		frappe.dom.set_style(repl('%(selector)s { \
+			%(background)s \
+			%(style)s \
+		}', {
+			selector:selector,
+			background:background,
+			style: ""
+		}));
 	}
 
-	frappe.dom.set_style(repl('%(selector)s { \
-		%(background)s \
-		%(style)s \
-	}', {
-		selector:selector,
-		background:background,
-		style: ""
-	}));
+	// origintheme.desk_2 = function(){
+	// 	if(!selector) selector = "#page-desktop";
+	// 	if(!style) style = "Fill Screen";
+	// 	if(src) {
+	// 		if (window.cordova && src.indexOf("http") === -1) {
+	// 			src = frappe.base_url + src;
+	// 		}
+	// 		var background = repl('background: url("%(src)s") center center;', {src: src});
+	// 	} else {
+	// 		var background = "background-color: #FFFFFF;";
+	// 	}
+
+	// 	frappe.dom.set_style(repl('%(selector)s { \
+	// 		%(background)s \
+	// 		%(style)s \
+	// 	}', {
+	// 		selector:selector,
+	// 		background:background,
+	// 		style: ""
+	// 	}));
+	// }
+
+	frappe.templates["logo"] = '<a href="/desk#/" class="hide-mobile logo">'
+	+     ' <span class="logo-mini"><b>or</b></span>'
+	+'      <span class="logo-lg"><b>Origin Aquatech</b></span>'
+	+'    </a>';
+
+	frappe.templates["sidebar-toggle"] = '<a href="#" class="hide-mobile sidebar-toggle hidden-item" data-toggle="offcanvas" role="button">'
+	+	        '<span class="sr-only">Toggle navigation</span>'
+	+	    '</a>';
+
+	frappe.templates["company-name"] = '<span class="hide-mobile navbar-company">origin admin</span>';
+	frappe.templates["material-icons"] = '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
+	frappe.templates["poppins"] = '<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">';
 }
-
-// origintheme.desk_2 = function(){
-// 	if(!selector) selector = "#page-desktop";
-// 	if(!style) style = "Fill Screen";
-// 	if(src) {
-// 		if (window.cordova && src.indexOf("http") === -1) {
-// 			src = frappe.base_url + src;
-// 		}
-// 		var background = repl('background: url("%(src)s") center center;', {src: src});
-// 	} else {
-// 		var background = "background-color: #FFFFFF;";
-// 	}
-
-// 	frappe.dom.set_style(repl('%(selector)s { \
-// 		%(background)s \
-// 		%(style)s \
-// 	}', {
-// 		selector:selector,
-// 		background:background,
-// 		style: ""
-// 	}));
-// }
-
-frappe.templates["logo"] = '<a href="/desk#/" class="logo">'
-+     ' <span class="logo-mini"><b>or</b></span>'
-+'      <span class="logo-lg"><b>Origin Aquatech</b></span>'
-+'    </a>';
-
-frappe.templates["sidebar-toggle"] = '<a href="#" class="sidebar-toggle hidden-item" data-toggle="offcanvas" role="button">'
-+	        '<span class="sr-only">Toggle navigation</span>'
-+	    '</a>';
-
-frappe.templates["company-name"] = '<span class="navbar-company">origin admin</span>';
-frappe.templates["material-icons"] = '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
-frappe.templates["poppins"] = '<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">';
