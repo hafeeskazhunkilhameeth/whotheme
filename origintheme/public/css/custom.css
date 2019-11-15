@@ -21,6 +21,14 @@
         font-weight: normal;
         font-style: italic;
     }
+/* version 12 fixes */
+    .navbar-fixed-top {
+        position: unset;
+    }
+
+    .modules-page-container{
+        margin-top: 60px;
+    }
 
     .appareo {
         font-family: 'appareo',  !important;
@@ -153,7 +161,7 @@
         .container-fluid>.navbar-header,
         .container>.navbar-collapse,
         .container-fluid>.navbar-collapse {
-            margin: 18px 15px;
+            margin: 21px 15px;
         }
     }
 
@@ -164,11 +172,20 @@
     }
 
     .navbar-brand {
-        padding: 1px 15px 0 15px;
-        line-height: 0;
-        height: 0;
+        float: none;
     }
 
+    .navbar-home {
+        visibility: hidden;
+    }
+    .page-actions .sub-heading {
+        max-width: 50%;
+        overflow: hidden;
+        font-size: 16px;
+    }
+    .prev-doc, .next-doc, .fa-print {
+        padding-right: 15px;
+    }
     #navbar-breadcrumbs>li>a:before {
         font-family: FontAwesome;
         font-weight: normal;
@@ -177,7 +194,7 @@
         -webkit-font-smoothing: antialiased;
         display: inline-block;
         speak: none;
-        font-size: 16px;
+        font-size: 18px;
         transition: 0.2s;
         position: relative;
         top: 1px;
@@ -189,7 +206,7 @@
 
     #navbar-breadcrumbs>li>a {
         top: 3px;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 400;
         color: #b2a177;
         padding: 0px;
@@ -344,7 +361,7 @@
 
     #page-desktop {
         background-color: #FFFFFF !important;
-        visibility: hidden !important;
+        /* visibility: hidden !important; */
         ;
     }
 
@@ -379,13 +396,22 @@
         font-weight: normal
     }
 
+    .frappe-control {
+        margin-bottom: 10px;
+    }
+
+    h4, .h4, h5, .h5, h6, .h6 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     h6.uppercase,
     .h6.uppercase {
-        color: #86754d;
-        font-size: 22px;
+        color: #565656;
+        font-size: 20px;
         text-transform: none;
         font-family: 'Poppins', sans-serif;
-        font-weight: 200;
+        font-weight: 100;
     }
 
     .form-documents h6 {
@@ -572,6 +598,7 @@
         color: white;
         background-color: #a5a8a8;
         border-color: transparent;
+        margin-left: 5px;
     }
 
     .btn-default:hover,
@@ -714,12 +741,10 @@
         color: #a2977c73;
         margin-left: 16px;
         position: relative;
-        bottom: -2px;
         font-size: 26px;
     }
 
     .form-section .section-head .collapse-indicator.octicon-chevron-up {
-        bottom: 2px;
     }
 
     .octicon-search {

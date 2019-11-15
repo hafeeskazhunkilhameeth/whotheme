@@ -1,39 +1,39 @@
 
 let isMobile = window.innerWidth < 640 ? true : false;
 
-function redirect_desk() {
+// function redirect_desk() {
 
-	var url_hash = window.location.hash.replace(/#/g,'').replace(/\//g,'');
-	var pathname = window.location.pathname.replace(/\//g,'');
-	if(pathname == 'desk' && (url_hash == '' || url_hash == 'desktop')) {
-		frappe.call({
-			method:"frappe.client.get",
-				args: {
-				doctype:"User",
-				filters: {
-					'name': frappe.user["name"]
-				},
-			},
-			callback: function(r) {
-				window.location.href = r.message["home_page_link"];
-			}
-		})
-	}
-}
+// 	var url_hash = window.location.hash.replace(/#/g,'').replace(/\//g,'');
+// 	var pathname = window.location.pathname.replace(/\//g,'');
+// 	if(pathname == 'desk' && (url_hash == '' || url_hash == 'desktop')) {
+// 		frappe.call({
+// 			method:"frappe.client.get",
+// 				args: {
+// 				doctype:"User",
+// 				filters: {
+// 					'name': frappe.user["name"]
+// 				},
+// 			},
+// 			callback: function(r) {
+// 				window.location.href = r.message["home_page_link"];
+// 			}
+// 		})
+// 	}
+// }
 
 // $(window).resize(function(){
 //   $('span').text(x += 1);
 // });
 
-$(window).bind('hashchange', function() {
-	redirect_desk()
-});
+	// $(window).bind('hashchange', function() {
+	// 	redirect_desk()
+	// });
 
 $(document).ready(function() {
 
 	// console.log("Current user", frappe.utils.user);
 
-	redirect_desk();
+	// redirect_desk();
 
 	// function handle_mobile() {
 	// 	if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

@@ -826,6 +826,7 @@
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
+    margin: 10px auto;
   }
 
   input[type="radio"],
@@ -901,7 +902,7 @@
   }
 
   .page-title .title-text {
-    margin-right: 7px;
+    margin-right: 20px;
     max-width: 75%;
     display: inline-block;
     vertical-align: middle;
@@ -924,4 +925,10 @@
   .list-subject .level-item {
     margin-right: 12px;
   }
+  .last-synced-text {
+    position: absolute;
+    top: 28px;
+    right: 70px;
+    font-size: 12px;
+}
 }
